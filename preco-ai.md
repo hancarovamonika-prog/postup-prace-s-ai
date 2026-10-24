@@ -15,4 +15,4 @@ Slovo „nezvládla“ je silné. Podľa toho, čo je v repozitári vidieť, by 
 
 ## Zhrnutie
 
-bez AI by som to zvládla, ale pomalšie a pravdepodobne s menším pokrytím. Odbornosť a posudzovanie kvality sú moje.
+Bez AI by som to zvládla, ale pomalšie a pravdepodobne s menším pokrytím. Odbornosť a posudzovanie kvality sú moje.
