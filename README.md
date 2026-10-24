@@ -1,5 +1,7 @@
 # Postup mojej práce
 
+*Posledná zmena: 24. 10. 2026*
+
 Ako s AI vzniká každá nová vec v tomto projekte. Najprv ju popíšem, potom z toho vznikne zadanie, zadanie sa rozseká na malé úlohy a tie sa stavajú a overujú jedna po druhej. Takto vznikli aj úlohy `vyplnit-sablonu-pozadavku` a `navrhnout-stories` v [.ukoly/](.ukoly/).
 
 ## Prehľad
@@ -53,7 +55,7 @@ Popri tom vznikali slovník [KONTEXT.md](KONTEXT.md), rozhodnutia v [rozhodnuti/
 Úloha **Znalosť systému** má päť rezov:
 
 1. Zápis na pokyn s potvrdením: **hotové**, ručná skúška prebehla.
-2. Čo sa do podkladu smie: pravidlá sú napísané v skille `znalost`, **chýba ručná skúška** (screen s osobnými údajmi a požiadavka „chcem, aby systém robil X“, nič z toho sa nesmie zapísať).
+2. Čo sa do podkladu smie: pravidlá sú v skille `znalost`: **hotové**, ručná skúška prebehla (screen s osobnými údajmi a požiadavka „chcem, aby systém robil X“ sa nezapísali, informácia od DITEC dostala stav A).
 3. Rozpory a overenie: čo robiť, keď nový screen odporuje staršiemu tvrdeniu, a ako sa tvrdenie z videa zmení na pozorované. **Nezačaté.**
 4. Zodpovedané otázky: odpoveď na otvorenú otázku zostane v tabuľke a zapíše sa ako pravidlo. **Nezačaté.**
 5. Požiadavok a ponuka zápisu: po dokončení požiadavku pomocník ponúkne zápis nového poznatku do podkladu. **Nezačaté.**
