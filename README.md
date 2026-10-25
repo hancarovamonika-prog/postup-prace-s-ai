@@ -1,6 +1,6 @@
 # Postup mojej práce
 
-*Posledná zmena: 24. 10. 2026*
+*Posledná aktualizácia: 25. 10. 2026, 11:02*
 
 Ako s AI vzniká každá nová vec v tomto projekte. Najprv ju popíšem, potom z toho vznikne zadanie, zadanie sa rozseká na malé úlohy a tie sa stavajú a overujú jedna po druhej. Takto vznikli aj úlohy `vyplnit-sablonu-pozadavku` a `navrhnout-stories` v [.ukoly/](.ukoly/).
 
@@ -40,30 +40,29 @@ Body 5 až 7 sa opakujú pre každý rez.
 
 ## Čo som doteraz urobila
 
-Prešla som tromi úlohami. Každá prešla krokmi 1 až 7 vyššie a je v [.ukoly/](.ukoly/).
+Prešla som štyrmi úlohami. Každá prešla krokmi 1 až 7 vyššie a je v [.ukoly/](.ukoly/).
 
 | Úloha | Kedy | Čo z nej vzniklo | Stav |
 |---|---|---|---|
 | **Vyplniť šablónu požiadavku** | 22. až 23. 10. 2026 | Z popisu problému pomocník ukáže prehľad a po potvrdení vytvorí kópiu šablóny. Vyplní kapitoly 1 až 4 (okrem 5 a 6), neoverené veci označí „(neoverené – Q-xx)“ a zapíše do otvorených otázok, osobné údaje do dokumentu nepustí a vie dokument opraviť na pokyn. Rezy: kópia šablóny, kapitola 1, otvorené otázky, osobné údaje, kapitola 2, zvyšok kapitoly 4, kapitola 3, opravy. | hotové, ručne overené, v `.ukoly/hotovo/` |
 | **Navrhnúť stories** | 23. 10. 2026 | Story s vlastnými kritériami za každý druh školy a rolu. Text pre Miro po kartách (ID a veta, kritériá v popise), ktorý sa skopíruje ručne. Rezy: kritériá za každú story, text pre Miro, zapojenie do skillu `pozadavek`. | hotové, ručne overené, v `.ukoly/hotovo/` |
-| **Znalosť systému** | od 24. 10. 2026 | Pravidlá, ako sa udržuje podklad v `znalost/`: zápis len na pokyn a po potvrdení, so stavom, dátumom a zdrojom. | rozpracované, pozri nižšie |
+| **Znalosť systému** | 24. 10. 2026 | Pravidlá, ako sa udržuje podklad v `znalost/`: zápis len na pokyn a po potvrdení, so stavom, dátumom a zdrojom. Rezy: zápis na pokyn, čo sa smie zapísať, rozpory a overenie, zodpovedané otázky, ponuka zápisu po dokončení požiadavku. | hotové, ručne overené, v `.ukoly/hotovo/` |
+| **Doptávanie a neoverené** | od 25. 10. 2026 | Pomocník sa pred prehľadom doptá na druh školy, používateľa a obrazovku, najviac tromi otázkami v kole. | rozpracované, pozri nižšie |
 
 Popri tom vznikali slovník [KONTEXT.md](KONTEXT.md), rozhodnutia v [rozhodnuti/](rozhodnuti/) a podklad v [znalost/](znalost/), do ktorého som postupne dopĺňala obrazovky a pravidlá systému z testovania a z videonávodov.
 
 ## Čo ma čaká
 
-Úloha **Znalosť systému** má päť rezov:
+Úloha **Doptávanie a neoverené** má tri rezy:
 
-1. Zápis na pokyn s potvrdením: **hotové**, ručná skúška prebehla.
-2. Čo sa do podkladu smie: pravidlá sú v skille `znalost`: **hotové**, ručná skúška prebehla (screen s osobnými údajmi a požiadavka „chcem, aby systém robil X“ sa nezapísali, informácia od DITEC dostala stav A).
-3. Rozpory a overenie: čo robiť, keď nový screen odporuje staršiemu tvrdeniu, a ako sa tvrdenie z videa zmení na pozorované. **Nezačaté.**
-4. Zodpovedané otázky: odpoveď na otvorenú otázku zostane v tabuľke a zapíše sa ako pravidlo. **Nezačaté.**
-5. Požiadavok a ponuka zápisu: po dokončení požiadavku pomocník ponúkne zápis nového poznatku do podkladu. **Nezačaté.**
+1. Doptanie pred prehľadom: pomocník sa v chate opýta najviac troma otázkami, na „neviem“ nič nedomýšľa. **Postavené**, ručná skúška ešte neprebehla.
+2. Vyžiadanie screenu: ak podklad drží obrazovku len v stave N, K alebo A, pomocník si vypýta screen alebo textový popis, bez neho ide obrazovka ako neoverená. **Nezačaté.**
+3. Rozlíšenie viet: veta o súčasnom fungovaní systému má „(neoverené – Q-xx)“, veta o požadovanej zmene značku nemá. **Nezačaté.**
 
-Potom sú v `.ukoly/` dva nápady, ktoré sa ešte neprebrali (každý sa najprv prejde cez `/vyzpovidej`):
+Potom ostáva v `.ukoly/` ešte jeden nápad (najprv sa prejde cez `/vyzpovidej`) a jedno zistenie:
 
 - **Archív zadaní:** hotové zadania (vyplnená šablóna a text stories) sa budú ukladať do zložky, aby sa dali dohľadať.
-- **Doptávanie a neoverené:** keď pomocníkovi niečo chýba, doptá sa alebo si vypýta screen a čo ostane neoverené, zapíše do otvorených otázok.
+- **Zdieľanie s kolegami:** kolegovia majú Microsoft 365 Copilot. V dnešnej podobe sa projekt nedá preniesť, lebo stojí na skriptoch, dalo by sa zdieľať len znalosť a pravidlá.
 
 Kapitoly 5 a 6 šablóny, číslo požiadavku (`EP-XY`) a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC.
 
