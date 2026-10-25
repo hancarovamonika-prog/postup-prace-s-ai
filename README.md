@@ -1,6 +1,6 @@
 # Postup mojej práce
 
-*Posledná aktualizácia: 25. 10. 2026, 11:02*
+*Posledná aktualizácia: 25. 10. 2026, 15:09*
 
 Ako s AI vzniká každá nová vec v tomto projekte. Najprv ju popíšem, potom z toho vznikne zadanie, zadanie sa rozseká na malé úlohy a tie sa stavajú a overujú jedna po druhej. Takto vznikli aj úlohy `vyplnit-sablonu-pozadavku` a `navrhnout-stories` v [.ukoly/](.ukoly/).
 
@@ -62,7 +62,19 @@ Popri tom vznikali slovník [KONTEXT.md](KONTEXT.md), rozhodnutia v [rozhodnuti/
 Potom ostáva v `.ukoly/` ešte jeden nápad (najprv sa prejde cez `/vyzpovidej`) a jedno zistenie:
 
 - **Archív zadaní:** hotové zadania (vyplnená šablóna a text stories) sa budú ukladať do zložky, aby sa dali dohľadať.
-- **Zdieľanie s kolegami:** kolegovia majú Microsoft 365 Copilot. V dnešnej podobe sa projekt nedá preniesť, lebo stojí na skriptoch, dalo by sa zdieľať len znalosť a pravidlá.
+- **Zdieľanie s kolegami:** kolegovia (päť ľudí, denne, približne tri mesiace) chcú dostať hotový vyplnený dokument ako ja, majú Visual Studio Code. V Microsoft 365 Copilote sa projekt preniesť nedá, lebo stojí na skriptoch, preto ide cesta cez VS Code. Čo musia mať pripravené, je v časti nižšie. Ešte sa vyspovedáva: kde bude zdieľaný priečinok a kto smie meniť podklad.
+
+## Čo potrebujú kolegovia
+
+Hotový dokument vznikne len vtedy, keď si AI môže na počítači kolegu spustiť skripty skillu `pozadavek`. Preto treba mať:
+
+1. **Visual Studio Code.** Majú.
+2. **Python 3** nainštalovaný na pracovnom počítači. Skripty používajú len štandardnú knižnicu, nič ďalšie sa neinštaluje. **Treba potvrdiť s IT, či to smú.**
+3. **Agenta v VS Code, ktorý vie spúšťať príkazy** (napríklad GitHub Copilot s licenciou). Číta skills z `.agents/skills/`. **Treba potvrdiť s IT, či a akú licenciu majú.**
+4. **Prístup k zdieľanému priečinku projektu** (podklad `znalost/`, šablóna `sablona/`, skills). Kde bude, sa ešte rozhoduje. Podklad sú popisy obrazoviek zo štátneho systému, preto treba potvrdiť, či smie ležať mimo môjho počítača.
+5. **Word** na otvorenie a dokončenie hotového dokumentu a **prístup do Miro**, kam sa karty z textu kopírujú ručne.
+
+Kým IT body 2 a 3 nepotvrdí, kolegovia môžu dostávať len hotový výstup, ktorý vyplním ja, alebo si v M365 Copilote nechať navrhnúť text kapitol a stories, ktorý do šablóny prepíšu ručne.
 
 Kapitoly 5 a 6 šablóny, číslo požiadavku (`EP-XY`) a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC.
 
