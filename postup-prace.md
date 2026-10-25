@@ -1,6 +1,6 @@
 # Postup mojej práce
 
-*Posledná aktualizácia: 25. 10. 2026, 15:09*
+*Posledná aktualizácia: 25. 10. 2026, 18:20*
 
 Ako s AI vzniká každá nová vec v tomto projekte. Najprv ju popíšem, potom z toho vznikne zadanie, zadanie sa rozseká na malé úlohy a tie sa stavajú a overujú jedna po druhej. Takto vznikli aj úlohy `vyplnit-sablonu-pozadavku` a `navrhnout-stories` v [.ukoly/](.ukoly/).
 
@@ -47,19 +47,13 @@ Prešla som štyrmi úlohami. Každá prešla krokmi 1 až 7 vyššie a je v [.u
 | **Vyplniť šablónu požiadavku** | 22. až 23. 10. 2026 | Z popisu problému pomocník ukáže prehľad a po potvrdení vytvorí kópiu šablóny. Vyplní kapitoly 1 až 4 (okrem 5 a 6), neoverené veci označí „(neoverené – Q-xx)“ a zapíše do otvorených otázok, osobné údaje do dokumentu nepustí a vie dokument opraviť na pokyn. Rezy: kópia šablóny, kapitola 1, otvorené otázky, osobné údaje, kapitola 2, zvyšok kapitoly 4, kapitola 3, opravy. | hotové, ručne overené, v `.ukoly/hotovo/` |
 | **Navrhnúť stories** | 23. 10. 2026 | Story s vlastnými kritériami za každý druh školy a rolu. Text pre Miro po kartách (ID a veta, kritériá v popise), ktorý sa skopíruje ručne. Rezy: kritériá za každú story, text pre Miro, zapojenie do skillu `pozadavek`. | hotové, ručne overené, v `.ukoly/hotovo/` |
 | **Znalosť systému** | 24. 10. 2026 | Pravidlá, ako sa udržuje podklad v `znalost/`: zápis len na pokyn a po potvrdení, so stavom, dátumom a zdrojom. Rezy: zápis na pokyn, čo sa smie zapísať, rozpory a overenie, zodpovedané otázky, ponuka zápisu po dokončení požiadavku. | hotové, ručne overené, v `.ukoly/hotovo/` |
-| **Doptávanie a neoverené** | od 25. 10. 2026 | Pomocník sa pred prehľadom doptá na druh školy, používateľa a obrazovku, najviac tromi otázkami v kole. | rozpracované, pozri nižšie |
+| **Doptávanie a neoverené** | od 25. 10. 2026 | Pomocník sa pred prehľadom doptá na druh školy, používateľa a obrazovku, najviac tromi otázkami v kole. Ak podklad drží obrazovku len v stave N, K alebo A, vypýta si screen alebo textový popis, bez neho ide obrazovka ako neoverená. Veta o súčasnom fungovaní systému má „(neoverené – Q-xx)“, veta o požadovanej zmene značku nemá. Rezy: doptanie pred prehľadom, vyžiadanie screenu, rozlíšenie viet. | hotové, ručne overené, v `.ukoly/hotovo/` |
 
 Popri tom vznikali slovník [KONTEXT.md](KONTEXT.md), rozhodnutia v [rozhodnuti/](rozhodnuti/) a podklad v [znalost/](znalost/), do ktorého som postupne dopĺňala obrazovky a pravidlá systému z testovania a z videonávodov.
 
 ## Čo ma čaká
 
-Úloha **Doptávanie a neoverené** má tri rezy:
-
-1. Doptanie pred prehľadom: pomocník sa v chate opýta najviac troma otázkami, na „neviem“ nič nedomýšľa. **Postavené**, ručná skúška ešte neprebehla.
-2. Vyžiadanie screenu: ak podklad drží obrazovku len v stave N, K alebo A, pomocník si vypýta screen alebo textový popis, bez neho ide obrazovka ako neoverená. **Nezačaté.**
-3. Rozlíšenie viet: veta o súčasnom fungovaní systému má „(neoverené – Q-xx)“, veta o požadovanej zmene značku nemá. **Nezačaté.**
-
-Potom ostáva v `.ukoly/` ešte jeden nápad (najprv sa prejde cez `/vyzpovidej`) a jedno zistenie:
+Všetky štyri úlohy sú hotové. V `.ukoly/` ostávajú dva nápady, každý sa najprv prejde cez `/vyzpovidej`:
 
 - **Archív zadaní:** hotové zadania (vyplnená šablóna a text stories) sa budú ukladať do zložky, aby sa dali dohľadať.
 - **Zdieľanie s kolegami:** kolegovia (päť ľudí, denne, približne tri mesiace) chcú dostať hotový vyplnený dokument ako ja, majú Visual Studio Code. V Microsoft 365 Copilote sa projekt preniesť nedá, lebo stojí na skriptoch, preto ide cesta cez VS Code. Čo musia mať pripravené, je v časti nižšie. Ešte sa vyspovedáva: kde bude zdieľaný priečinok a kto smie meniť podklad.
