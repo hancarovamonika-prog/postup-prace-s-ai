@@ -70,7 +70,7 @@ Hotový dokument vznikne len vtedy, keď si AI môže na počítači kolegu spus
 
 Kým IT body 2 a 3 nepotvrdí, kolegovia môžu dostávať len hotový výstup, ktorý vyplním ja, alebo si v M365 Copilote nechať navrhnúť text kapitol a stories, ktorý do šablóny prepíšu ručne.
 
-Kapitoly 5 a 6 šablóny, číslo požiadavku (`EP-XY`) a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC.
+Kapitoly 5 a 6 šablóny a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC. Číslo požiadavky dám pomocníkovi ja (v chate alebo cez „zosúlaď prehľad“) a on ho zapíše do dokumentu, stories, názvu súboru aj prehľadu.
 
 ## Ak niečo nejde
 
