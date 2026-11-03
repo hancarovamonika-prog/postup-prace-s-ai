@@ -70,6 +70,17 @@ Hotový dokument vznikne len vtedy, keď si AI môže na počítači kolegu spus
 
 Kým IT body 2 a 3 nepotvrdí, kolegovia môžu dostávať len hotový výstup, ktorý vyplním ja, alebo si v M365 Copilote nechať navrhnúť text kapitol a stories, ktorý do šablóny prepíšu ručne.
 
+### Ako to spustiť vo VS Code
+
+Zatiaľ to na počítači kolegu nikto neskúšal, prvá požiadavka je zároveň skúška.
+
+1. **Overiť Python.** Vo VS Code otvoriť terminál (*Terminal → New Terminal*) a napísať `python --version`. Má sa ukázať číslo verzie (napríklad 3.12). Ak nie, treba IT.
+2. **Otvoriť priečinok projektu** cez *File → Open Folder*.
+3. **Otvoriť chat GitHub Copilota a prepnúť ho na režim Agent.** Len v ňom smie AI spúšťať skripty.
+4. **Napísať požiadavku ako v tomto projekte**, napríklad „mám nový požiadavok: rodič nevie vyfiltrovať prihlášky podľa dieťaťa“. AI má sama použiť skill `pozadavek`. Ak nie, napísať jej: „použi skill pozadavek z `.agents/skills`“.
+5. **Povoliť spustenie príkazov**, keď sa AI opýta. Tak vytvorí kópiu šablóny a vyplní ju.
+6. **Hotový dokument je v `pozadavky/`** a zapísaný v `pozadavky/PREHLAD.md`. Otvoriť ho vo Worde a skontrolovať.
+
 Kapitoly 5 a 6 šablóny a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC. Číslo požiadavky dám pomocníkovi ja (v chate alebo cez „zosúlaď prehľad“) a on ho zapíše do dokumentu, stories, názvu súboru aj prehľadu.
 
 ## Ak niečo nejde
