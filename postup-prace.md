@@ -1,6 +1,6 @@
 # Postup mojej práce
 
-*Posledná aktualizácia: 25. 10. 2026, 18:20*
+*Posledná aktualizácia: 6. 11. 2026, 21:20*
 
 Ako s AI vzniká každá nová vec v tomto projekte. Najprv ju popíšem, potom z toho vznikne zadanie, zadanie sa rozseká na malé úlohy a tie sa stavajú a overujú jedna po druhej. Takto vznikli aj úlohy `vyplnit-sablonu-pozadavku` a `navrhnout-stories` v [.ukoly/](.ukoly/).
 
@@ -40,7 +40,7 @@ Body 5 až 7 sa opakujú pre každý rez.
 
 ## Čo som doteraz urobila
 
-Prešla som štyrmi úlohami. Každá prešla krokmi 1 až 7 vyššie a je v [.ukoly/](.ukoly/).
+Prešla som šiestimi úlohami a siedma sa dokončuje. Každá prešla krokmi 1 až 7 vyššie a je v [.ukoly/](.ukoly/).
 
 | Úloha | Kedy | Čo z nej vzniklo | Stav |
 |---|---|---|---|
@@ -48,38 +48,45 @@ Prešla som štyrmi úlohami. Každá prešla krokmi 1 až 7 vyššie a je v [.u
 | **Navrhnúť stories** | 23. 10. 2026 | Story s vlastnými kritériami za každý druh školy a rolu. Text pre Miro po kartách (ID a veta, kritériá v popise), ktorý sa skopíruje ručne. Rezy: kritériá za každú story, text pre Miro, zapojenie do skillu `pozadavek`. | hotové, ručne overené, v `.ukoly/hotovo/` |
 | **Znalosť systému** | 24. 10. 2026 | Pravidlá, ako sa udržuje podklad v `znalost/`: zápis len na pokyn a po potvrdení, so stavom, dátumom a zdrojom. Rezy: zápis na pokyn, čo sa smie zapísať, rozpory a overenie, zodpovedané otázky, ponuka zápisu po dokončení požiadavku. | hotové, ručne overené, v `.ukoly/hotovo/` |
 | **Doptávanie a neoverené** | od 25. 10. 2026 | Pomocník sa pred prehľadom doptá na druh školy, používateľa a obrazovku, najviac tromi otázkami v kole. Ak podklad drží obrazovku len v stave N, K alebo A, vypýta si screen alebo textový popis, bez neho ide obrazovka ako neoverená. Veta o súčasnom fungovaní systému má „(neoverené – Q-xx)“, veta o požadovanej zmene značku nemá. Rezy: doptanie pred prehľadom, vyžiadanie screenu, rozlíšenie viet. | hotové, ručne overené, v `.ukoly/hotovo/` |
+| **Archív zadaní** | 27. až 30. 10. 2026 | Každý požiadavok má v `pozadavky/` dokument, vedľa neho súbor stories a riadok v prehľade požiadaviek `pozadavky/PREHLAD.md` so stavom a počtom stories a otvorených otázok. Číslo požiadavky zapíše pomocník, až keď ho dám, a súbory sa potom premenujú (rozhodnutie 0005). Rezy: prehľad existujúcich dokumentov, nový riadok pri založení kópie, súbor stories, stav a číslo. | hotové, v `.ukoly/hotovo/` |
+| **Testy stories a otázok** | 30. 10. 2026 | Automatické testy strážia, že stories, kritériá a tabuľka otvorených otázok 4.3 sa do dokumentu zapisujú správne a nerozbijú sa pri uložení. Rezy: spoločné pomôcky, zápis stories, text pre Miro a súbor stories, otvorené otázky. | hotové, v `.ukoly/hotovo/` |
+| **Zdieľanie s kolegami** | od 3. 11. 2026 | Pomocník sa presúva do práce ako spoločný agent v Microsoft 365 Copilote (rozhodnutie 0007). Vznikol balík na stiahnutie: pokyny pre agenta, podklad vo Worde, tabuľka požiadaviek v Exceli, postup vo Worde a šablóna. Rezy 01 až 05 sú postavené a overené výpočtom. | ručné overenie a skúška prvého dňa čakajú na firemný počítač |
 
 Popri tom vznikali slovník [KONTEXT.md](KONTEXT.md), rozhodnutia v [rozhodnuti/](rozhodnuti/) a podklad v [znalost/](znalost/), do ktorého som postupne dopĺňala obrazovky a pravidlá systému z testovania a z videonávodov.
 
+### Testovanie systému s AI
+
+Od 4. 11. 2026 testujem s AI systém ePrihlášky v testovacom prostredí, od 6. 11. podľa akceptačných testov (UAT) pre dodávateľa. Postup:
+
+- AI pracuje vo vstavanom prehliadači. Prihlasujem sa vždy ja, AI heslá nezadáva. Na prepnutie role (zákonný zástupca, riaditeľ) alebo školy sa treba odhlásiť a prihlásiť znova.
+- AI smie použiť existujúce testovacie dáta a vytvoriť nové, len keď to dovolím, a vždy s vymyslenými údajmi. Druhú osobu s rodným číslom si nevymýšľa.
+- Výsledky, vady, návrh e-mailu pre dodávateľa a priebežný stav sa ukladajú do samostatného súkromného repozitára. E-mail posielam ja.
+- Do súborov ani obrázkov sa nezapisujú mená, adresy, rodné čísla, čísla prihlášok ani heslá.
+- Overené poznatky idú do podkladu v [znalost/](znalost/) len cez `/znalost`, po ukážke a mojom potvrdení. Po zápise sa znova vygeneruje podklad vo Worde a balík.
+- Poučenie z testovania: AI nesmie vyberať neaktívne (sivé) prvky nástrojom, ktorý ich obíde. Inak vznikne chyba, ktorú bežný používateľ nikdy neuvidí.
+
 ## Čo ma čaká
 
-Všetky štyri úlohy sú hotové. V `.ukoly/` ostávajú dva nápady, každý sa najprv prejde cez `/vyzpovidej`:
-
-- **Archív zadaní:** hotové zadania (vyplnená šablóna a text stories) sa budú ukladať do zložky, aby sa dali dohľadať.
-- **Zdieľanie s kolegami:** kolegovia (päť ľudí, denne, približne tri mesiace) chcú dostať hotový vyplnený dokument ako ja, majú Visual Studio Code. V Microsoft 365 Copilote sa projekt preniesť nedá, lebo stojí na skriptoch, preto ide cesta cez VS Code. Čo musia mať pripravené, je v časti nižšie. Ešte sa vyspovedáva: kde bude zdieľaný priečinok a kto smie meniť podklad.
+- **Skúška prvého dňa vo firme** (rez 06 zdieľania): nastavím spoločného agenta, overím ho na skutočnom požiadavku a prvý kolega podľa postupu sám vyplní kópiu šablóny. Až potom dostanú agenta ostatní kolegovia.
+- **Ručné overenia rezov 01 až 05** na firemnom počítači: podklad vo Worde, tabuľka v Exceli, postup a stiahnutie balíka.
+- **Dokončenie UAT, fáza 1**, a po potvrdení dodávateľa fázy 2 a 3.
 
 ## Čo potrebujú kolegovia
 
-Hotový dokument vznikne len vtedy, keď si AI môže na počítači kolegu spustiť skripty skillu `pozadavek`. Preto treba mať:
+Od 4. 11. 2026 platí rozhodnutie 0007: kolegovia budú pracovať so spoločným agentom v Microsoft 365 Copilote, nie so skriptmi. Pôvodná cesta cez VS Code a Python padla, lebo kolegovia majú len M365 Copilot. Treba mať:
 
-1. **Visual Studio Code.** Majú.
-2. **Python 3** nainštalovaný na pracovnom počítači. Skripty používajú len štandardnú knižnicu, nič ďalšie sa neinštaluje. **Treba potvrdiť s IT, či to smú.**
-3. **Agenta v VS Code, ktorý vie spúšťať príkazy** (napríklad GitHub Copilot s licenciou). Číta skills z `.agents/skills/`. **Treba potvrdiť s IT, či a akú licenciu majú.**
-4. **Prístup k zdieľanému priečinku projektu** (podklad `znalost/`, šablóna `sablona/`, skills). Kde bude, sa ešte rozhoduje. Podklad sú popisy obrazoviek zo štátneho systému, preto treba potvrdiť, či smie ležať mimo môjho počítača.
-5. **Word** na otvorenie a dokončenie hotového dokumentu a **prístup do Miro**, kam sa karty z textu kopírujú ručne.
+1. **Microsoft 365 Copilot** a spoločného agenta, ktorého nastavím a zdieľam ja. **Neoverené:** či licencia dovoľuje agenta vytvoriť a zdieľať.
+2. **Spoločný priečinok v Teams alebo SharePointe** so šablónou, tabuľkou požiadaviek a hotovými dokumentmi. Podklad v ňom mením len ja. **Neoverené:** či smie podklad ležať vo firemnom M365.
+3. **Word** na vyplnenie kópie šablóny a **prístup do Miro**, kam sa karty z textu kopírujú ručne.
 
-Kým IT body 2 a 3 nepotvrdí, kolegovia môžu dostávať len hotový výstup, ktorý vyplním ja, alebo si v M365 Copilote nechať navrhnúť text kapitol a stories, ktorý do šablóny prepíšu ručne.
+### Ako to bude fungovať v práci
 
-### Ako to spustiť vo VS Code
+1. Stiahnem z GitHubu balík `balik.zip` (pokyny pre agenta, podklad vo Worde, postup, tabuľka požiadaviek, šablóna) a nahrám ho do spoločného priečinka a do agenta.
+2. Kolega opíše agentovi problém alebo chýbajúcu funkciu. Agent ukáže prehľad a po potvrdení napíše text kapitol 1 až 4, stories a kontrolný zoznam.
+3. Kolega text ručne prenesie do kópie šablóny vo Worde, skontroluje ho podľa kontrolného zoznamu a pridá riadok do tabuľky požiadaviek.
+4. Prvé dva až tri dokumenty každého kolegu skontrolujem ja, lebo bez skriptov chýbajú automatické kontroly.
 
-Zatiaľ to na počítači kolegu nikto neskúšal, prvá požiadavka je zároveň skúška.
-
-1. **Overiť Python.** Vo VS Code otvoriť terminál (*Terminal → New Terminal*) a napísať `python --version`. Má sa ukázať číslo verzie (napríklad 3.12). Ak nie, treba IT.
-2. **Otvoriť priečinok projektu** cez *File → Open Folder*.
-3. **Otvoriť chat GitHub Copilota a prepnúť ho na režim Agent.** Len v ňom smie AI spúšťať skripty.
-4. **Napísať požiadavku ako v tomto projekte**, napríklad „mám nový požiadavok: rodič nevie vyfiltrovať prihlášky podľa dieťaťa“. AI má sama použiť skill `pozadavek`. Ak nie, napísať jej: „použi skill pozadavek z `.agents/skills`“.
-5. **Povoliť spustenie príkazov**, keď sa AI opýta. Tak vytvorí kópiu šablóny a vyplní ju.
-6. **Hotový dokument je v `pozadavky/`** a zapísaný v `pozadavky/PREHLAD.md`. Otvoriť ho vo Worde a skontrolovať.
+Podrobný postup pre kolegov je v balíku (`postup.docx`).
 
 Kapitoly 5 a 6 šablóny a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC. Číslo požiadavky dám pomocníkovi ja (v chate alebo cez „zosúlaď prehľad“) a on ho zapíše do dokumentu, stories, názvu súboru aj prehľadu.
 
