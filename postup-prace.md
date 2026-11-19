@@ -1,6 +1,6 @@
 # Postup mojej práce
 
-*Posledná aktualizácia: 6. 11. 2026, 21:20*
+*Posledná aktualizácia: 19. 11. 2026*
 
 Ako s AI vzniká každá nová vec v tomto projekte. Najprv ju popíšem, potom z toho vznikne zadanie, zadanie sa rozseká na malé úlohy a tie sa stavajú a overujú jedna po druhej. Takto vznikli aj úlohy `vyplnit-sablonu-pozadavku` a `navrhnout-stories` v [.ukoly/](.ukoly/).
 
@@ -87,6 +87,8 @@ Od 4. 11. 2026 platí rozhodnutie 0007: kolegovia budú pracovať so spoločným
 4. Prvé dva až tri dokumenty každého kolegu skontrolujem ja, lebo bez skriptov chýbajú automatické kontroly.
 
 Podrobný postup pre kolegov je v balíku (`postup.docx`).
+
+Návrh, ako sa namiesto ručného prenosu dá šablóna vyplniť automaticky cez Copilot Studio a Power Automate (cesta B), je v [postup-vyplnenie-cez-flow.md](postup-vyplnenie-cez-flow.md). Text polí vyplní flow, zaškrtávacie polia ostávajú ručne. Najprv musí IT potvrdiť MFA, licenciu Copilot Studia a konektory.
 
 Kapitoly 5 a 6 šablóny a meno autora ostávajú mimo pomocníka: dopĺňam ich ja alebo sa vypĺňajú s DITEC. Číslo požiadavky dám pomocníkovi ja (v chate alebo cez „zosúlaď prehľad“) a on ho zapíše do dokumentu, stories, názvu súboru aj prehľadu.
 
